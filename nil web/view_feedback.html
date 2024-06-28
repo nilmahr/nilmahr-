@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Feedback - Nilmahr{% endblock %}
+{% block content %}
+<section id="view-feedback">
+    <h1>Client Feedback</h1>
+    <ul>
+        {% for feedback in feedbacks %}
+            <li>
+                <strong>{{ feedback.name }}</strong> ({{ feedback.email }}): <br>
+                {{ feedback.message }}
+            </li>
+        {% endfor %}
+    </ul>
+</section>
+{% endblock %}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Nilmahr</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="src/mil.logo.jpeg" alt="Nilmahr Logo" class="logo">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="about">
+            <h1>About Nilmahr</h1>
+            <p>Nilmahr is a leading provider of networking solutions, committed to delivering innovative and reliable services to businesses of all sizes. Our mission is to empower our clients with cutting-edge technology and exceptional customer service.</p>
+            <div class="team">
+                <h2>Our Team</h2>
+                <div class="team-member">
+                    <img src="images/team1.jpg" alt="Team Member">
+                    <h3>Jane Doe</h3>
+                    <p>CEO</p>
+                </div>
+                <div class="team-member">
+                    <img src="images/team2.jpg" alt="Team Member">
+                    <h3>John Smith</h3>
+                    <p>CTO</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Nilmahr. All rights reserved.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+{% extends "base.html" %}
+{% block title %}About Us - Nilmahr{% endblock %}
+{% block content %}
+<section id="about">
+    <h1>About Nilmahr</h1>
+    <p>Nilmahr is a leading provider of networking solutions, committed to delivering innovative and reliable services to businesses of all sizes. Our mission is to empower our clients with cutting-edge technology and exceptional customer service.</p>
+    <div class="team">
+        <h2>Our Team</h2>
+        <div class="team-member">
+            <img src="{{ url_for('static', filename='images/team1.jpg') }}" alt="Team Member">
+            <h3>Jane Doe</h3>
+            <p>CEO</p>
+        </div>
+        <div class="team-member">
+            <img src="{{ url_for('static', filename='images/team2.jpg') }}" alt="Team Member">
+            <h3>John Smith</h3>
+            <p>CTO</p>
+        </div>
+    </div>
+</section>
+{% endblock %}
